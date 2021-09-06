@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korean Drinks</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Single Day', cursive;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(4, minmax(100px, auto));
+      background-color: Snow;
+    }
+
+    .title {
+      grid-column: 1 / 6;
+      grid-row: 1 / 3;
+      justify-self: center;
+      align-self: center;
+      color: LightPink;
+    }
+
+    .item {
+      display: grid;
+      grid-column: 2 / 5;
+      grid-row: 3 / 4;
+      grid-template-columns: subgrid;
+      grid-template-rows: repeat(3, minmax(80px, auto));
+      gap: 18px;
+    }
+
+    .subitem {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, minmax(80px, auto));
+      background: HoneyDew;
+      align-items: center;
+      justify-items: center;
+      border: 1px solid LightPink;
+      border-radius: 8px;
+    }
+
+    .subitem:nth-child(2n+1) {
+      background: Ivory;
+    }
+
+    .subitem p {
+      font-size: 26px;
+      color: LightPink;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      width: 120px;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 80px repeat(2, 1fr) 80px;
+      }
+      .item {
+        grid-column: 2 / 4;
+        grid-row: 3 / 4;
+        grid-template-columns: subgrid;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: 80px 1fr 80px;
+      }
+      .item {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        grid-template-columns: subgrid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <h1 class="title">Korean Drinks</h1>
+    <div class="item">
+      <div class="subitem">
+        <p>
+          <span>Soju</span>
+          <span>(소주)</span>
+        </p>
+        <img src="https://i.ibb.co/Bfr6CT4/Untitled-Artwork-12.png" alt="Soju">
+        <p>$2.00</p>
+      </div>
+      <div class="subitem">
+        <p>
+          <span>Bacchus</span>
+          <span>(박카스)</span>
+        </p>
+        <img src="https://i.ibb.co/xg2wnjg/Untitled-Artwork-9.png" alt="Bacchus">
+        <p>$2.00</p>
+      </div>
+      <div class="subitem">
+        <p>
+          <span>Banana Milk</span>
+          <span>(바나나맛 우유)</span>
+        </p>
+        <img src="https://i.ibb.co/sFNCQ5M/Untitled-Artwork-11.png" alt="Banana Milk">
+        <p>$3.00</p>
+      </div>
+      <div class="subitem">
+        <p>
+          <span>Sikye</span>
+          <span>(식혜))</span>
+        </p>
+        <img src="https://i.ibb.co/XWjfds3/Untitled-Artwork-4.png" alt="Sikye">
+        <p>$2.00</p>
+      </div>
+      <div class="subitem">
+        <p>
+          <span>Omija tea</span>
+          <span>(오미자차)</span>
+        </p>
+        <img src="https://i.ibb.co/CByNds6/Untitled-Artwork-7.png" alt="Omija tea">
+        <p>$3.00</p>
+      </div>
+      <div class="subitem">
+        <p>
+          <span>Coffee Milk</span>
+          <span>(커피 우유)</span>
+        </p>
+        <img src="https://i.ibb.co/jv6R4mv/Untitled-Artwork-5.png" alt="Coffee Milk">
+        <p>$3.00</p>
+      </div>
+      <div class="subitem">
+        <p>
+          <span>Milkis</span>
+          <span>(밀키스)</span>
+        </p>
+        <img src="https://i.ibb.co/3yq5F2j/Untitled-Artwork-6.png" alt="Milkis">
+        <p>$2.00</p>
+      </div>
+      <div class="subitem">
+        <p>
+          <span>Ground grains</span>
+          <span>(미숫가루)</span>
+        </p>
+        <img src="https://i.ibb.co/Qng07GZ/Untitled-Artwork-10.png" alt="Ground grains">
+        <p>$2.00</p>
+      </div>
+      <div class="subitem">
+        <p>
+          <span>Job’s tears</span>
+          <span>(율무차)</span>
+        </p>
+        <img src="https://i.ibb.co/CByNds6/Untitled-Artwork-7.png" alt="Job’s tears">
+        <p>$3.00</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
